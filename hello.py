@@ -8,6 +8,12 @@ os.chdir('./res/alice')
 alice = aiml.Kernel()
 
 alice.learn('startup.xml')
-alice.response('LOAD ALICE')
+alice.respond('LOAD ALICE')
 
-alice.respond('hello')
+while True:
+    question = raw_input('SGH >>> ')
+    if question == 'exit':
+        print 'Bye-bye!'
+        break
+
+    print 'ALICE >>>', alice.respond(question)

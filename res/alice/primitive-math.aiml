@@ -14,32 +14,28 @@
 <pattern>LEARNEQUAL *</pattern>
 <template>
 <!-- Learn <star/> = <star/>. -->
-<learn>
-</learn>
 </template>
 </category>
-
-<category>
-<pattern><eval><star/></eval> TESTEQUAL 
-<eval><star/></eval></pattern>
-<template>True</template>
 <learn>
-</learn>
+<category>
+<pattern><eval><star/></eval> TESTEQUAL <eval><star/></eval></pattern>
+<template>True</template>
 </category>
-
+</learn>
+<learn>
 <category>
 <pattern><eval><star/></eval> TESTEQUAL *</pattern>
 <template>False</template>
 </category>
-<learn>
 </learn>
-
+<learn>
 <category>
 <pattern>* TESTQUAL <eval><star/></eval></pattern>
 <template>False</template>
-<learn>
-</learn>
 </category>
+</learn>
+
+
 
 <category><pattern>SUCCESSOR
 0</pattern><template>1</template></category>
